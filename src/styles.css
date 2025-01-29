@@ -1,12 +1,38 @@
 #bannerDiv {
     width: 100%;
-    height: 300px;
+    height: 450px;
     background-image: url(BannerImg.png);
-};
+}
 
 .button {
     background-color: #245a40;
     color: white;
     border: 1px solid transparent;
     border-radius: 5px;
-};
+    padding: 10px;
+}
+
+#restarauntInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+#textInfo {
+    flex: 1;
+}
+
+#menuContainer {
+    flex: 2;
+}
+
+#menuListings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#menuConent {
+
+}
