@@ -25,6 +25,10 @@
 
 #menuContainer {
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #menuListings {
@@ -35,4 +39,9 @@
 
 #menuConent {
 
+}
+
+.menuImages {
+    height: 40px;
+    width: 40px;
 }

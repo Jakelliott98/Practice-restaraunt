@@ -1,5 +1,8 @@
 import restarauntImage from './RImage.jpg';
 import bannerImage from './bannerImg.png';
+import menuImage1 from './MenuImage1.jpg';
+import menuImage2 from './MenuImage2.jpg';
+import menuImage3 from './MenuImage3.jpg';
 
 export function createContent(){
 
@@ -58,21 +61,25 @@ export function createContent(){
             button.innerHTML = 'View All Menus';
             button.className = 'button';
         
-            function createComponent(title, text){
+            function createComponent(title, text, image){
 
                 const contentDiv = document.createElement('div');
                 const titleElement = document.createElement('h5');
                 const textElement = document.createElement('p');
+                const images = document.createElement('img');
 
+                images.className = 'menuImages';
                 contentDiv.className = 'menuConent';
                 titleElement.className = 'menuTitle';
                 textElement.className = 'menuText';
 
                 titleElement.innerHTML = title;
                 textElement.innerHTML = text;
+                images.src = image;
 
                 restarauntInfo.appendChild(menus);
                 menuListings.appendChild(contentDiv);
+                contentDiv.appendChild(images);
                 contentDiv.appendChild(titleElement);
                 contentDiv.appendChild(textElement);
 
@@ -83,9 +90,9 @@ export function createContent(){
             menus.appendChild(menuListings);
             menus.appendChild(button);
 
-            createComponent('A La Carte', 'Available Everyday');
-            createComponent('$19.50 Two-Course Menu', 'Available Monday - Friday, 11:30am - 6:30pm');
-            createComponent('Breakfast', 'Available Everyday');
+            createComponent('A La Carte', 'Available Everyday', menuImage1);
+            createComponent('$19.50 Two-Course Menu', 'Available Monday - Friday, 11:30am - 6:30pm', menuImage2);
+            createComponent('Breakfast', 'Available Everyday', menuImage3);
 
         };
 
